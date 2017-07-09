@@ -55,7 +55,6 @@ def four_point_transform(image, pts, square=False):
 		maxWidth = big
 		maxHeight = big
 
-	print(maxHeight, maxWidth)
 	dst = np.array([
 		[0, 0],
 		[maxWidth - 1, 0],
