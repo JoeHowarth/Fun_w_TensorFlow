@@ -28,8 +28,9 @@ def showImg(img, size=0, color=cv2.COLOR_BGR2RGB):
 def get_images(mypath, stack=False):
     onlyfiles = [ f for f in listdir(mypath) if isfile(join(mypath,f)) ]
     images = np.empty(len(onlyfiles), dtype=object)
+    onlyfiles = sorted(onlyfiles)
     for n in range(0, len(onlyfiles)):
-        images[n] = cv2.imread( join(mypath,onlyfiles[n]) )
+        images[n] = cv2.imread( join(mypath,onlyfiles[n]))
         #if n > 1:
             #stacked = np.stack((stacked,images[n])s)
     if stack:
